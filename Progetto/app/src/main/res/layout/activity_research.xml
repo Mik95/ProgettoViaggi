@@ -7,50 +7,39 @@
     tools:context="applicazione.progetto.travelplan.Research">
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="38dp"
-        android:text="Benvenuto" />
-
-    <TextView
-        android:id="@+id/tvnome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView3"
-        android:layout_marginStart="17dp"
-        android:layout_toEndOf="@+id/textView3"
-        android:hint="nome" />
-
-    <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvnome"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="125dp"
-        android:text="Ricerca" />
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="15dp"
+        android:text="Ricerca :" />
 
     <EditText
         android:id="@+id/etRicerca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView5"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
+        android:layout_toEndOf="@id/textView5"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="5dp"
         android:ems="10"
-        android:hint="città,indirizzo,hotel"
+        android:hint="Città, indirizzo, hotel..."
         android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/btnCerca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etRicerca"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
+        android:layout_toEndOf="@id/etRicerca"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="32dp"
         android:text="Cerca" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignStart="@+id/tvBenvenuto"
+        android:id="@+id/list"
+        android:layout_below="@+id/btnCerca"
+        android:layout_marginTop="21dp" />
+
 </RelativeLayout>

@@ -3,7 +3,10 @@ package applicazione.progetto.travelplan;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.view.ViewManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -27,6 +30,9 @@ public class Registration extends Activity {
 
     TextView comp;
     TextView check;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +66,10 @@ public class Registration extends Activity {
                     if(ep.getText().toString().equals(ecp.getText().toString()))
                     {
                         Toast.makeText(Registration.this,"Ti sei registrato",Toast.LENGTH_SHORT).show();
+                        comp.setVisibility(View.INVISIBLE);
+                        check.setVisibility(View.INVISIBLE);
+                        final UtenteDBAdapter udba = new UtenteDBAdapter(Registration.this);
+                        udba.insertData(en.getText().toString(), ec.getText().toString(),ee.getText().toString(),eu.getText().toString(), ep.getText().toString(), ed.getText().toString());
                         Intent i = new Intent(Registration.this,MainActivity.class);
                         startActivity(i);
                     }
@@ -73,7 +83,24 @@ public class Registration extends Activity {
         });
 
 
-
-
     }
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.radioFemmina:
+                if (checked)
+                    m.setChecked(false);
+                    break;
+            case R.id.radioMaschio:
+                if (checked)
+                    f.setChecked(false);
+                    break;
+        }
+    }
+
+
 }

@@ -50,7 +50,7 @@ public class MainActivity extends Activity {
                 }
                 else
                 {
-                    Intent i = new Intent(MainActivity.this,Research.class);
+                    Intent i = new Intent(MainActivity.this,Pianificazione.class);
                     String username = eU.getText().toString();
                     i.putExtra("Username",username);
                     startActivity(i);

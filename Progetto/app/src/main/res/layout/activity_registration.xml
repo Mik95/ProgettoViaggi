@@ -63,16 +63,17 @@
         android:layout_alignBottom="@+id/textView7"
         android:layout_marginStart="45dp"
         android:layout_toEndOf="@+id/textView8"
+        android:onClick="onRadioButtonClicked"
         android:text="F" />
 
     <RadioButton
         android:id="@+id/radioMaschio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/radioFemmina"
         android:layout_alignBottom="@+id/radioFemmina"
-        android:layout_alignBaseline="@+id/textView7"
-        android:layout_alignEnd="@+id/etCognome"
-        android:layout_marginEnd="50dp"
+        android:layout_alignStart="@+id/btnConferma"
+        android:onClick="onRadioButtonClicked"
         android:text="M" />
 
     <TextView
@@ -89,10 +90,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView8"
-        android:layout_marginLeft="120dp"
+        android:layout_alignStart="@+id/etEmail"
         android:ems="10"
         android:hint="dd/mm/yyyy"
-        android:inputType="date" />
+        android:inputType="date"
+        android:maxLength="10" />
 
     <TextView
         android:id="@+id/textView9"
@@ -151,7 +153,7 @@
         android:layout_alignStart="@+id/etUser"
         android:ems="10"
         android:hint="Inserire password"
-        android:inputType="numberPassword" />
+        android:inputType="textPassword" />
 
     <TextView
         android:id="@+id/tvNonCompleto"
@@ -209,4 +211,7 @@
         android:layout_alignStart="@+id/textView8"
         android:text="Le password non corrispondono!"
         android:visibility="invisible" />
+
+
+
 </RelativeLayout>

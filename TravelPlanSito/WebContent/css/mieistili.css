@@ -1,0 +1,21 @@
+@import "compass/css3";
+
+#tpl{
+	-webkit-transition: width 1s;
+    transition: width 1s;
+}
+
+#logobar{
+	-webkit-transition: height 1s;
+    transition: height 1s;
+    cursor: pointer;
+}
+
+#creapiano {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+	

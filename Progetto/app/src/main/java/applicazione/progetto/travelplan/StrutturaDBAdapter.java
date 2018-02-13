@@ -25,20 +25,14 @@ class StrutturaDBAdapter {
     private SQLiteDatabase database;
 
     public StrutturaDBAdapter(Context aContext) {
+        context = aContext;
         /*openHelper = new DatabaseHelper(aContext);
         database = openHelper.getWritableDatabase();*/
     }
 
-    public StrutturaDBAdapter open() throws SQLException {
+    public void open() throws SQLException {
         openHelper = new DatabaseHelper(context);
         database = openHelper.getWritableDatabase();
-        aaaa
-
-        
-
-
-
-        return this;
     }
 
     public void close() {
@@ -72,10 +66,20 @@ class StrutturaDBAdapter {
     }
 */
     public Cursor getCitta (String city) {
-        String buildSQL = "SELECT * FROM " + TABLE_NAME + " WHERE " + STRUTTURA_TABLE_COLUMN_CITTA + " LIKE " + city;
-        Log.d("StrutturaDBAdapter", "getCitta SQL: " + buildSQL);
 
-        Cursor c = database.rawQuery(buildSQL, null);
+        Cursor c = null;
+
+        try {
+
+
+            String buildSQL = "SELECT * FROM " + TABLE_NAME + " WHERE " + STRUTTURA_TABLE_COLUMN_CITTA + " LIKE '" + city + "'";
+            Log.d ( "StrutturaDBAdapter", "getCitta SQL: " + buildSQL );
+
+            c = database.rawQuery ( buildSQL, null );
+        }
+        catch (Exception ex) {
+            Log.d ( "StrutturaDBAdapter", ex.getMessage () );
+        }
         return c;
     }
 
@@ -101,4 +105,4 @@ class StrutturaDBAdapter {
         cursor.close();
     }*/
 
-    }
+}

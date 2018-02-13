@@ -2,6 +2,7 @@ package applicazione.progetto.travelplan;
 import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -18,6 +19,8 @@ public class Research extends Activity {
     EditText ricerca;
     TextView uname;
 
+    StrutturaDBAdapter sdba = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,23 +32,17 @@ public class Research extends Activity {
         ricerca = (EditText) findViewById(R.id.etRicerca);
 
 
-       final StrutturaDBAdapter sdba = new StrutturaDBAdapter(this);
+       sdba = new StrutturaDBAdapter(this);
+       sdba.open ();
         /*sdba.insertData(1,"Palace", "Milano");
         sdba.insertData(2,"Hilton", "Milano");
         sdba.insertData(3,"Price", "Roma");
         sdba.insertData(4,"Queen", "Trieste");
 */
 
-        final Cursor c = sdba.getCitta ( "Milano" );//.getAllData();
 
-        if (c.moveToFirst()) {
-            while (c.moveToNext()) {
-                Toast.makeText(this, c.getString(c.getColumnIndex(StrutturaDBAdapter.STRUTTURA_TABLE_COLUMN_CITTA)), Toast.LENGTH_SHORT).show();
-            }
-
-        }
        final ListView lv = (ListView)findViewById(R.id.list);
-        final CustomCursorAdapter cca = new CustomCursorAdapter(this, sdba.getAllData());
+        final CustomCursorAdapter cca = new CustomCursorAdapter(this, sdba.getAllData ());
         //final CustomCursorAdapter cca = new CustomCursorAdapter(this, sdba.getCitta ( "Milano" ));
         lv.setAdapter(cca);
        /*final List<Struttura> hotel = new ArrayList<Struttura>();
@@ -120,5 +117,12 @@ public class Research extends Activity {
                 return false;
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy ();
+
+        sdba.close ();
     }
 }

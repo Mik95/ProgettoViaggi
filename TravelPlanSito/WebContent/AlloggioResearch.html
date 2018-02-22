@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="it" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>TravelPlan - Scegli Alloggio</title>
+  
+  	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- stile stelline -->
+  
+	<!-- Main CSS Files -->  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+	<link rel="stylesheet" href="css/mieistili.css">
+	<link rel="stylesheet" href="css/stiliNavbar.css">
+
+</head>
+
+<body style= "background-color: #eaeaea">
+
+  <!--==========================
+  Header Section
+  ============================-->
+  <nav id="header" class="navbar navbar-inverse" data-spy="affix" data-offset-top="970">
+    <div id="container">
+      <table id="tab1">
+      	<tr>
+      		<td width="100">
+      			<div id="logo">
+        			<a href="Home.html#sfondoiniziale">
+        			<img onmouseenter="ingrandimento()" onmouseleave="rimpicciolimento()"
+        			 id="logobar" src="img/TravelPlanRigaWhite2.png" alt="TravelPlan Logo" height="40" /></img>
+        			</a>
+      			</div>
+      		</td>
+      
+      		<td>
+      			<nav id="nav-menu-container">
+        		<ul class="nav-menu">
+          		<li><a href="Home.html#sfondoiniziale">Accedi / Registrati</a></li>
+          		<li><a href="Home.html#sezviaggi">Sezione Viaggi</a></li>
+        		</ul>
+      			</nav>
+      		</td>
+      	</tr>
+      </table>
+    </div>
+  </nav>
+  
+  <!--==========================
+  Hotel Research
+  ============================-->  
+
+<section><br><br><br><br> 
+ 
+<div class="form large-form">
+
+	<form action="/" method="post">
+	
+	<div class="field-wrap" style="font-style: italic;">
+            <label>
+              <i align="right" class="fa fa-search"></i>  search...
+            </label>
+            <input type="text"/>
+    </div>        
+
+	<div class="field-wrap">
+		<label class="planlabel">
+			<table align="center" id="dentrolabel">
+            	<tr>
+					<td align="center" class="fotohotel">
+						<img src="img/NoHotelImage.png" width="100%">
+					</td>
+							
+					<td>
+						<table style="width: 100%;">
+							<tr>
+								<td class="nomealloggio">
+									Hotel nomeAlloggio
+									&nbsp;
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</td>
+								
+								<td class="prezzoalloggio">000€</td>  
+							</tr>
+							
+							<tr><td class="descalloggio"><img alt="maplogo" src="img/maps.png" width="20">&nbsp;Città: / &nbsp;Longitudine: / &nbsp;Latitudine: / </td></tr>
+							<tr><td class="descalloggio">Tipo alloggio:</td></tr>
+							<tr><td class="descalloggio">Descrizione:</td></tr>
+						</table>
+					</td>  		
+           		</tr>
+            </table>
+            		
+            <table align="center">
+            	<tr>
+					<td><input type="button" class="gestplan" value="Guarda Hotel" onclick="top.location.href = 'AlloggioView.html'" /></td>
+					<td><input type="button" class="gestplan" value="Prenota Hotel" onclick="top.location.href = 'AlloggioResearch.html'" /></td>
+				</tr>
+            </table>
+		</label>
+	</div>
+	
+	<div class="field-wrap">
+		<label class="planlabel">
+			<table align="center" id="dentrolabel">
+            	<tr>
+					<td align="center" class="fotohotel">
+						<img src="img/NoHotelImage.png" width="100%">
+					</td>
+							
+					<td>
+						<table style="width: 100%;">
+							<tr>
+								<td class="nomealloggio">
+									Hotel nomeAlloggio
+									&nbsp;
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</td>
+								
+								<td class="prezzoalloggio">000€</td>  
+							</tr>
+							
+							<tr><td class="descalloggio"><img alt="maplogo" src="img/maps.png" width="20">&nbsp;Città: / &nbsp;Longitudine: / &nbsp;Latitudine: / </td></tr>
+							<tr><td class="descalloggio">Tipo alloggio:</td></tr>
+							<tr><td class="descalloggio">Descrizione:</td></tr>
+						</table>
+					</td>  		
+           		</tr>
+            </table>
+            		
+            <table align="center">
+            	<tr>
+					<td><input type="button" class="gestplan" value="Guarda Hotel" onclick="top.location.href = 'AlloggioView.html'" /></td>
+					<td><input type="button" class="gestplan" value="Prenota Hotel" onclick="top.location.href = 'AlloggioResearch.html'" /></td>
+				</tr>
+            </table>
+		</label>
+	</div>
+	
+	<div class="field-wrap">
+		<label class="planlabel">
+			<table align="center" id="dentrolabel">
+            	<tr>
+					<td align="center" class="fotohotel">
+						<img src="img/NoHotelImage.png" width="100%">
+					</td>
+							
+					<td>
+						<table style="width: 100%;">
+							<tr>
+								<td class="nomealloggio">
+									Hotel nomeAlloggio
+									&nbsp;
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</td>
+								
+								<td class="prezzoalloggio">000€</td>  
+							</tr>
+							
+							<tr><td class="descalloggio"><img alt="maplogo" src="img/maps.png" width="20">&nbsp;Città: / &nbsp;Longitudine: / &nbsp;Latitudine: / </td></tr>
+							<tr><td class="descalloggio">Tipo alloggio:</td></tr>
+							<tr><td class="descalloggio">Descrizione:</td></tr>
+						</table>
+					</td>  		
+           		</tr>
+            </table>
+            		
+            <table align="center">
+            	<tr>
+					<td><input type="button" class="gestplan" value="Guarda Hotel" onclick="top.location.href = 'AlloggioView.html'" /></td>
+					<td><input type="button" class="gestplan" value="Prenota Hotel" onclick="top.location.href = 'AlloggioResearch.html'" /></td>
+				</tr>
+            </table>
+		</label>
+	</div>
+	
+	</form>
+	
+</div>
+
+
+
+</section>  
+  
+  
+  
+  <!--==========================
+  Footer
+  ============================-->
+<br><br><br><br>
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <object id="s">TravelPlan</object>.  All Rights Reserved
+          </div>
+          <div class="credits">
+            Site made by Alessandro Bertoli.<br><br><br>
+          </div>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  
+  
+<script src='js/jquery-3.3.1.min.js'></script>
+<script  src="js/miefunzioni.js"></script>
+<script  src="js/index.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>  

@@ -13,4 +13,3 @@ function ingrandimento() {
 function rimpicciolimento() {
 	document.getElementById('logobar').height=40;
 };
-

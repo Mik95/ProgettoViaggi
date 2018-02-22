@@ -18,4 +18,81 @@
   background-size: cover;
 }
 
+.planlabel{
 	
+	margin-top: 35px;
+	position: relative;
+	font-size: 16px;
+  	display: block;
+  	width: 100%;
+  	min-height: 150px;
+  	background: none;
+  	background-image: none;
+  	border: 1px solid #a0b3b0;
+  	color: #ffffff;
+  	border-radius: 0;
+  	left: 0px;
+  	
+  	
+}	
+
+.planlabel:hover{
+	border-color: #1ab188;
+}
+
+#saved{
+	position: relative;
+	visibility: hidden;
+	}
+
+#dentrolabel{	
+	width: 95%;
+}
+
+.tappa{
+	min-width: 120px;
+	height: 100px;	
+}
+
+.linea{
+	width: 100%;
+}
+
+.fotohotel{
+	width: 200px;
+	height: 200px;	
+}
+
+.nomealloggio{
+	font-size: 32px;
+	color: #ffffff;
+}
+
+.descalloggio{
+	color: rgba(160, 179, 176, 0.75);
+}
+
+.descalloggio:hover{
+	color: #ffffff;
+}
+
+
+.fa-star{
+	font-size: 20px;
+	color: rgba(160, 179, 176, 0.25);
+}
+
+.checked{
+	color: #ffffff;
+}
+
+.prezzoalloggio{
+	font-size: 40px;
+	font-weight: bold;
+	color: #ffffff;
+	cursor: default;
+}
+
+.prezzoalloggio:hover{
+	color: #1ab188;
+}

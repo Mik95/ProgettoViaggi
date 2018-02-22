@@ -74,6 +74,10 @@ a:hover {
   display: none;
 }
 
+.tab2-content > div:last-child {
+  display: none;
+}
+
 h1 {
   text-align: center;
   color: #ffffff;
@@ -90,7 +94,6 @@ label {
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
-  pointer-events: none;
   font-size: 22px;
 }
 label .req {
@@ -134,6 +137,14 @@ input:focus, textarea:focus {
   border-color: #1ab188;
 }
 
+.date1{
+	width: 80%;
+	margin-bottom: 40px;
+	float: right;
+}
+
+#l1{margin-top: 75px;}
+
 textarea {
   border: 2px solid #a0b3b0;
   resize: vertical;
@@ -171,7 +182,9 @@ textarea {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-appearance: none;
+  cursor: pointer;
 }
+
 .button:hover, .button:focus {
   background: #179b77;
 }
@@ -182,6 +195,33 @@ textarea {
 	border-bottom-left-radius: 30%;
 	display: marker;
   	width: 100px;
+}
+
+.gestplan{
+	font-family: 'Titillium Web', sans-serif;
+	border: 0;
+  	padding: 15px 5px;
+  	outline: none;
+  	font-size: 18px;
+  	background: rgba(160, 179, 176, 0.25);
+  	color: #a0b3b0;
+  	-webkit-transition: all 0.5s ease;
+  	transition: all 0.5s ease;
+  	-webkit-appearance: none;
+  	margin-bottom: 35px;
+  	margin-left: 2.5px;
+  	margin-right: 2.5px;
+  	cursor: pointer;
+}
+
+.gestplan:hover, .gestplan:focus {
+  	background: #179b77;
+  	color: #fff;
+}
+
+.aview{
+	padding: 10px 2px;
+	font-size: 16px;
 }
 
 .fine-viaggio{

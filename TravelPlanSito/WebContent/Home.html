@@ -136,8 +136,7 @@
       			<nav id="nav-menu-container">
         		<ul class="nav-menu">
           		<li><a href="#sfondoiniziale">Accedi / Registrati</a></li>
-          		<li><a href="#creapiano">Pianifica il tuo Viaggio</a></li>
-          		<li><a href="#mieiviaggi">I miei Viaggi</a></li>
+          		<li><a href="#sezviaggi">Sezione Viaggi</a></li>
         		</ul>
       			</nav>
       		</td>
@@ -145,83 +144,121 @@
       </table>
     </div>
   </nav>
-  <!-- #header -->
  
   <!--==========================
   Create Plan Section
   ============================--> 
  
-<section id="creapiano"><br><br><br><br>
-
+<section id="sezviaggi"><br><br><br><br> 
+ 
 <div class="form large-form">
-	<div class="tab-content">
-	<form action="/" method="post">
+
+	<ul class="tab-group">
+        <li class="tab2 active"><a href="#creapiano">Pianifica il tuo Viaggio</a></li>
+        <li class="tab2"><a href="#mieiviaggi">I miei Viaggi</a></li>
+    </ul>
+
+	<div class="tab2-content">
+		<div id="creapiano">
+		<form action="/" method="post">
 	
-		<div class="field-wrap"><label>
-              Città<span class="req">*</span>
-            </label>
-            <input type="text"required autocomplete="off"/>
-         </div>
+			<div class="field-wrap"><label>
+    	          Città <span class="req">*</span>
+        	    </label>
+            	<input type="text"required autocomplete="off"/>
+    	     </div>
          
-        <div class="field-wrap"><label>
-              gg/mm/aaaa<span class="req">*</span>
+       	 	<div class="field-wrap"><label>
+              	Data partenza:<span class="req">*</span>
+            	</label>
+            	<input class="date1" type="date" required autocomplete="off"/>
+         	</div>
+         
+         	<div class="field-wrap"><label id="l1">
+              	Data arrivo:<span class="req">*</span>
+            	</label>
+            	<input class="date1" type="date" required autocomplete="off"/>
+         	</div>
+         	
+			<table align="center">
+				<tr>
+					<td><input type="button" class="button rounded-button" value="+" onclick="top.location.href = 'AlloggioResearch.html'" /></td>
+					<td><button class="button fine-viaggio">Termina Viaggio</button></td>
+				</tr>
+			</table>
+		</form>
+		
+		<div class="field-wrap">
+            <label class="planlabel" id="saved">
+            	Piano 1
             </label>
-            <input type="date"required autocomplete="off"/>
-         </div>
-          
-          <button class="button button-block">Imposta Partenza</button>
-	</form>	
-	</div>
-<br><br><br><br>
-
-<table align="center">
-<tr>
-	<td><button class="button rounded-button">+</button></td>
-	<td><button class="button fine-viaggio">Termina Viaggio</button></td>
-</tr>
-</table>
-
-<br><br><br><br>
-	<div class="tab-content">
-	<form action="/" method="post">
-
-        <div class="field-wrap"><label>
-              gg/mm/aaaa<span class="req">*</span>
-            </label>
-            <input type="date"required autocomplete="off"/>
-         </div>
-          
-          <button class="button button-block">Imposta Arrivo</button>
-	</form>	
-	</div>
-</div>
-
-</section> 
-
+        </div>
+		
+		</div>
   <!--==========================
+  
   My Plans Section
   ============================--> 
   
-<br><br><br><br>
-	<div class="tab-content">
-	<form action="/" method="post">
+		<div id="mieiviaggi">
+		<form action="/" method="post">
 
-        <div class="field-wrap"><label>
-              gg/mm/aaaa<span class="req">*</span>
-            </label>
-            <input type="date"required autocomplete="off"/>
-         </div>
-          
-          <button class="button button-block">Imposta Arrivo</button>
-	</form>	
+        	<div class="field-wrap">
+            	<label class="planlabel">
+            		<table align="center" id="dentrolabel">
+            			<tr>
+							<td align="center" class="tappa">
+							Milano<br>01/01/2018
+							</td>
+							
+							<td align="center" class="linea">
+							<img src="img/airplane.png" width="30px">
+							<hr color="white" size="2px">
+							</td>
+							
+							<td align="center" class="tappa">
+							Roma<br>01/01/2018
+							</td>      		
+            			</tr>
+            			
+            			<tr>
+							<td align="center" class="tappa">
+							Roma<br>01/01/2018
+							</td>
+							
+							<td align="center" class="linea">
+							<img src="img/car.png" width="30px">
+							<hr color="white" size="2px">
+							</td>
+							
+							<td align="center" class="tappa">
+							Milano<br>01/01/2018
+							</td>      		
+            			</tr>
+            		</table>
+            		
+            		<table align="center">
+            		<tr>
+						<td><button class="gestplan">Modifica Piano</button></td>
+						<td><button class="gestplan">Cancella Piano</button></td>
+					</tr>
+            		</table>
+            		
+            	</label>
+         	</div>
+         	
+		</form>	
+		</div>
 	</div>
+	
 </div>
 
-</section>   
+</section>  
  
   <!--==========================
   Footer
   ============================-->
+<br><br><br><br>
   <footer id="footer">
     <div class="container">
       <div class="row">
@@ -236,14 +273,13 @@
         </div>
       </div>
   </footer>
-  <!-- #footer -->
 
   
   
 <script src='js/jquery-3.3.1.min.js'></script>
 <script  src="js/miefunzioni.js"></script>
 <script  src="js/index.js"></script>
-<script  src="js/custom.js"></script>
+
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 

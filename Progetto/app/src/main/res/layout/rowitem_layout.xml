@@ -9,9 +9,8 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView3"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="51dp"
+        android:layout_marginTop="10dp"
         android:src="@mipmap/facciata" />
 
     <TextView
@@ -19,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/imH1"
-        android:layout_marginStart="33dp"
+        android:layout_marginStart="13dp"
         android:layout_toEndOf="@+id/imH1"
         android:text="Hotel 1 " />
 
@@ -33,32 +32,8 @@
         android:layout_toEndOf="@+id/imH1"
         android:text="indirizzo " />
 
-    <TextView
-        android:id="@+id/cittaH2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/indirizzoH2"
-        android:layout_below="@+id/indirizzoH2"
-        android:layout_marginTop="11dp"
-        android:text="città" />
 
-    <TextView
-        android:id="@+id/hotel2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imH2"
-        android:layout_marginTop="14dp"
-        android:layout_toEndOf="@+id/cittaH2"
-        android:text="Hotel 2" />
 
-    <TextView
-        android:id="@+id/indirizzoH2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/citaH1"
-        android:layout_below="@+id/hotel2"
-        android:layout_marginTop="11dp"
-        android:text="indirizzo " />
 
     <TextView
         android:id="@+id/citaH1"
@@ -69,47 +44,12 @@
         android:layout_marginTop="14dp"
         android:text="città " />
 
-    <TextView
-        android:id="@+id/hotel3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imH3"
-        android:layout_toEndOf="@+id/citaH1"
-        android:text="Hotel 3" />
 
-    <TextView
-        android:id="@+id/indirizzoH3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/cittaH2"
-        android:layout_below="@+id/hotel3"
-        android:layout_marginTop="13dp"
-        android:text="indirizzo " />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dettagliHotel">
+    </FrameLayout>
 
-    <TextView
-        android:id="@+id/citaH3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/indirizzoH3"
-        android:layout_below="@+id/indirizzoH3"
-        android:layout_marginTop="12dp"
-        android:text="città " />
 
-    <ImageView
-        android:id="@+id/imH2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignStart="@+id/imH1"
-        android:layout_below="@+id/imH1"
-        android:layout_marginTop="41dp"
-        android:src="@mipmap/camera" />
-
-    <ImageView
-        android:id="@+id/imH3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignStart="@+id/imH2"
-        android:layout_below="@+id/imH2"
-        android:layout_marginTop="40dp"
-        android:src="@mipmap/albergopiscina" />
 </RelativeLayout>

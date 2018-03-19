@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorText"
+    tools:context="applicazione.progetto.travelplan.Fragment.Pianificazione">
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorText"
+    tools:context="applicazione.progetto.travelplan.Fragment.Pianificazione">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        app:backgroundTint="@color/sfondobottomnav"
+        android:src="@drawable/ic_add"
+        android:clickable="true"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabRemove"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/btConfermaViaggio"
+        android:layout_marginLeft="30dp"
+        app:backgroundTint="@color/sfondobottomnav"
+        android:src="@drawable/ic_remove"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/txCityPartenza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:text="PARTENZA" />
+
+    <EditText
+        android:id="@+id/edCityPartenza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Città di partenza"
+        android:inputType="text"
+        android:maxLength="10"
+        />
+
+    <TextView
+        android:id="@+id/txCityArrivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edCityPartenza"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="ARRIVO" />
+
+    <EditText
+        android:id="@+id/edCityArrivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_below="@+id/edCityPartenza"
+        android:ems="10"
+        android:hint="Città di arrivo"
+        android:inputType="text"
+        android:maxLength="10"
+        />
+
+
+
+    <TextView
+        android:id="@+id/txData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txCityArrivo"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:text="PARTENZA" />
+
+    <EditText
+        android:id="@+id/edData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_below="@+id/edCityArrivo"
+        android:ems="10"
+        android:hint="dd/mm/yyyy"
+        android:inputType="date"
+        android:maxLength="10"
+        />
+
+
+    <ImageView
+        android:id="@+id/people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txData"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_people" />
+
+
+    <EditText
+        android:id="@+id/edPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/people"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="120dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="0" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/aggiuntaPiano"
+        android:layout_below="@id/edPeople"
+        android:layout_marginBottom="130dp"/>
+
+    <Button
+        android:id="@+id/btConfermaViaggio"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/btTermina"
+        android:background="@color/sfondobottomnav"
+        android:layout_alignStart="@id/btTermina"
+        android:textColor="@color/focus"
+        android:text="CONFERMA PIANO" />
+
+    <Button
+        android:id="@+id/btTermina"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/sfondobottomnav"
+        android:layout_toRightOf="@id/fab"
+        android:layout_alignBaseline="@id/fab"
+        android:layout_alignBottom="@id/fab"
+        android:layout_marginLeft="45dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/focus"
+        android:text="TERMINA VIAGGIO " />
+
+
+
+</RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

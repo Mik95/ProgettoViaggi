@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:enabled="true"
+        android:title="@string/buttonHome"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/create_travel_plan"
+        android:icon="@drawable/ic_create"
+        android:enabled="true"
+        android:title="@string/piano"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/my_travels"
+        android:icon="@drawable/ic_travels"
+        android:enabled="true"
+        android:title="@string/viaggio"
+        app:showAsAction="ifRoom"/>
+
+</menu>

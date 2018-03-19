@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/immagine"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/facciata" />
+
+    <TextView
+        android:id="@+id/txtipologia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="20dp"
+        android:text="Matrimoniale " />
+
+    <TextView
+        android:id="@+id/txnotte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hotel1"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="50dp"
+        android:text="1 notte " />
+
+
+
+
+    <TextView
+        android:id="@+id/txprezzo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/indirizzo1"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="80dp"
+        android:text="100 euro " />
+
+    <TextView
+        android:id="@+id/txoptional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtipologia"
+        android:layout_alignBottom="@+id/txtipologia"
+        android:layout_marginLeft="250dp"
+        android:text="Frigo bar" />
+
+
+</RelativeLayout>

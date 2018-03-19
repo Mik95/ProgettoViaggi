@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="applicazione.progetto.travelplan.Activity.Login">
+
+
+
+    <ImageView
+        android:id="@+id/im"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/colorText"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/travelblacks" />
+    <Button
+        android:id="@+id/btnAccedi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:textColor="@color/focus"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="220dp"
+        android:text="Accedi" />
+
+    <TextView
+        android:id="@+id/tve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="140dp"
+        android:text="Email" />
+
+    <EditText
+        android:id="@+id/etlEmail"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tve"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="example@gmail.com"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/tvp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tve"
+        android:layout_below="@+id/etlEmail"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Password" />
+
+    <EditText
+        android:id="@+id/etPass"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvp"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Inserire password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/tvSeiRegistrato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etPass"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:layout_marginTop="370dp"
+        android:text="Sei registrato?" />
+
+    <FrameLayout
+        android:id="@+id/r"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+    </FrameLayout>
+
+</RelativeLayout>

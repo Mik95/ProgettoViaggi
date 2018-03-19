@@ -13,7 +13,7 @@ public class UtenteHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     // Lo statement SQL di creazione del database
-    private static final String DATABASE_CREATE = "create table utente (_id integer primary key autoincrement, nome text not null, cognome text not null,email text not null,userName text not null,password text not null, dataNascita date not null);";
+    private static final String DATABASE_CREATE = "create table utente (_id integer primary key autoincrement, nome text not null, cognome text not null,email text not null,password text not null, dataNascita date not null);";
 
     // Costruttore
     public UtenteHelper(Context context) {

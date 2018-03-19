@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="3dp"
+    card_view:contentPadding="3dp"
+    android:clickable="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/giornoPullman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="05/03/2018" />
+        <ImageView
+            android:id="@+id/imagePullman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/giornoPullman"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/ic_pullman" />
+
+
+        <TextView
+            android:id="@+id/partPullman"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/title"
+            android:text="Milan Bergamo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/destPullman"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:textColor="@color/title"
+            android:textStyle="bold"
+            android:text="Barcellona"
+            />
+
+        <TextView
+            android:id="@+id/oraPartPullman"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="95dp"
+            android:text="08.35"
+            />
+        <TextView
+            android:id="@+id/oraDestPullman"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="95dp"
+            android:layout_marginLeft="250dp"
+            android:text="10.15"
+            />
+
+        <Button
+            android:id="@+id/prezzoPullman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imagePullman"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="120$" />
+
+    </RelativeLayout>
+
+
+
+</android.support.v7.widget.CardView>

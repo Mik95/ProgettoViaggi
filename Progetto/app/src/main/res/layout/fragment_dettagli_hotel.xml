@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorText"
+    tools:context="applicazione.progetto.travelplan.Fragment.DettagliHotelFragment">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/colorText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:id="@+id/edDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/viewPager"
+        android:layout_marginStart="5dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Hotel Tipton" />
+
+
+    <ImageView
+        android:id="@+id/stella1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="300dp"
+        android:src="@mipmap/ic_star" />
+
+    <ImageView
+        android:id="@+id/stella2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="300dp"
+        android:src="@mipmap/ic_star" />
+
+    <ImageView
+        android:id="@+id/stella3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="300dp"
+        android:src="@mipmap/ic_star" />
+
+    <ImageView
+        android:id="@+id/stella4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="126dp"
+        android:layout_marginTop="300dp"
+        android:src="@mipmap/ic_star" />
+
+
+
+    <TextView
+        android:id="@+id/txInd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="390dp"
+        android:layout_marginLeft="5dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="via Padre Pio 17 Milano" />
+
+    <ImageView
+        android:id="@+id/stella5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="168dp"
+        android:layout_marginTop="300dp"
+        android:src="@mipmap/ic_star"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btSelCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Seleziona camere" />
+
+
+
+</RelativeLayout>

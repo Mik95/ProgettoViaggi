@@ -13,7 +13,7 @@ import applicazione.progetto.travelplan.DatabaseHelper;
  * Created by itsadmin on 29/01/2018.
  */
 
-class StrutturaDBAdapter {
+public class StrutturaDBAdapter {
 
     private static final String TABLE_NAME = "struttura";  // Table name
    public static final String STRUTTURA_TABLE_COLUMN_ID = "_id"; // a column named "_id" is required for cursor
@@ -57,14 +57,7 @@ class StrutturaDBAdapter {
         return database.rawQuery(buildSQL, null);
     }
 
-/*
-    public boolean controlloCitta(String city) {
-        String buildSQL = "SELECT * FROM " + TABLE_NAME + "WHERE EXISTS " + city;
-        Log.d("StrutturaDBAdapter", "getAllData SQL: " + buildSQL);
 
-        return true;
-    }
-*/
     public Cursor getCitta (String city) {
 
         Cursor c = null;
@@ -92,17 +85,5 @@ class StrutturaDBAdapter {
 
 
 
-  /* public Cursor leggoDato(String city)
-    {
-        String sSelect ="select citta from struttura where citta="+city;
-        Cursor cursor = database.rawQuery(sSelect,null);
-
-        while (cursor.moveToNext())
-        {
-            return cursor.getString(2);
-        }
-        database.close();
-        cursor.close();
-    }*/
 
 }

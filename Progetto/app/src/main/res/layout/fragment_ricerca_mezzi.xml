@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorText"
+    tools:context="applicazione.progetto.travelplan.Fragment.RicercaMezziFragment">
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerAereo"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="horizontal"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerPullman"
+        android:layout_width="match_parent"
+        android:layout_height="129dp"
+        android:layout_below="@id/recyclerAereo"
+        android:orientation="horizontal"
+        />
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerAuto"
+        android:layout_width="match_parent"
+        android:layout_height="129dp"
+        android:layout_below="@id/recyclerPullman"
+        android:orientation="horizontal"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerTreno"
+        android:layout_width="match_parent"
+        android:layout_height="127dp"
+        android:layout_below="@id/recyclerAuto"
+        android:orientation="horizontal"
+        />
+
+
+</RelativeLayout>
+

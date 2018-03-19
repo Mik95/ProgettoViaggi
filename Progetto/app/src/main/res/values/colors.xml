@@ -2,5 +2,14 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#13232F</color>
+    <color name="colorText">#FFFF</color>
+    <color name="year">#999999</color>
+    <color name="title">#FFFF</color>
+    <color name="focus">#1AB188</color>
+    <color name ="Dark">#303F9F</color>
+    <color name="tit">#222222</color>
+    <color name="sfondobottomnav">#13232F</color>
+
+
 </resources>

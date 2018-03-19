@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="TravelPlanSito">
+    <wb-module deploy-name="TravelPlan">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <dependent-module archiveName="TravelPlan.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/TravelPlan/TravelPlan">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <property name="java-output-path" value="/TravelPlanSito/build/classes"/>
-        <property name="context-root" value="TravelPlanSito"/>
+        <property name="context-root" value="TravelPlan"/>
+        <property name="java-output-path" value="/TravelPlan/build/classes"/>
     </wb-module>
 </project-modules>

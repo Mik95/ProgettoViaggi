@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>TravelPlan - Il Mio Profilo</title>
+  
+  <link rel="icon" href="img/favicon.ico" />
+  
+  	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  
+	<!-- Main CSS Files -->  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+	<link rel="stylesheet" href="css/mieistili.css">
+	<link rel="stylesheet" href="css/stiliNavbar.css">
+
+</head>
+
+<body style= "background-color: #eaeaea">
+
+
+  <!--==========================
+  Header Section
+  ============================-->
+  <nav id="header" class="navbar navbar-inverse" data-spy="affix" data-offset-top="970">
+    <div id="container">
+      <table id="tab1">
+      	<tr>
+      		<td width="100">
+      			<div id="logo">
+        			<a href="MyProfile.html">
+        			<img onmouseenter="ingrandimento()" onmouseleave="rimpicciolimento()"
+        			 id="logobar" src="img/TravelPlanRigaWhite2.png" alt="TravelPlan Logo" height="40" /></img>
+        			</a>
+      			</div>
+      		</td>
+      
+      		<td>
+      			<nav id="nav-menu-container">
+        		<ul class="nav-menu">
+          		<li><a href="PianificaViaggio.html">Crea Piano di Viaggio</a></li>
+          		<li><a href="MieiViaggi.html">I miei Viaggi</a></li>
+        		</ul>
+      			</nav>
+      		</td>
+      	</tr>
+      </table>
+    </div>
+  </nav>
+  
+  <!--========================== 
+  Prenota Mezzo Section
+  ============================--> 
+
+<div class="infotype">Informazioni Account</div>
+
+<div class="form large-form">
+		<div id="creapiano">
+			<table align="center" style="width: 70%;">
+				<tr>
+					<td class="info">Nome: <span id="name"></div></td>
+				</tr>
+				
+				<tr>
+					<td class="info">Cognome: <span id="lastname"></span></td>
+				</tr>
+				
+				<tr>
+					<td class="info">Email: <span id="email"></span></td>
+				</tr>
+				
+				<tr>
+					<td class="info">Password: <span id="password"></span></td>
+					<td align="right"><input type="button" class="gestplan infochange" value="Cambia Password" onclick="cambiaPW()" /></td>
+				</tr>
+				
+			</table>
+			
+			<br><br>
+			<table style="width: 100%;"><tr><td align="center" class="info line">
+				<input type="button" class="gestplan infochange" value="Logout" onclick="logout()" />
+			</td></tr></table>
+			
+	</div>
+</div>
+
+<div class="infotype">Crediti</div>
+
+<div class="form large-form">
+		<div id="creapiano">
+			<table style="width: 100%;">
+				<tr>
+					<td class="info line">Per utilizzare TravelPlan al meglio sul tuo dispositivo mobile scarica la nostra app:</td>
+					<td><a href="https://play.google.com/store" target="_blank">
+					<img id="appLink" onmouseover="cambiaImgGooglePlay()" onmouseleave="ricambiaImgGooglePlay()" width="100px" class="gestplan infochange" alt="Link App Android" src="img/GooglePlay.PNG">
+					</a></td>
+				</tr>
+				
+				<tr>
+					<td class="info">Segui la nostra pagina Facebook:</td>
+					<td><a href="https://www.facebook.com/TravelPlan-558120511234290/" target="_blank">
+					<img id="pageLink" onmouseover="cambiaImgFb()" onmouseleave="ricambiaImgFb()" width="100px" class="gestplan infochange fb" alt="Link Pagina Facebook" src="img/facebook.png">
+					</a></td>
+				</tr>
+				
+				<tr>
+					<td style="padding-top: 26px;" class="info">SVILUPPATORI PROGETTO:</td>
+				</tr>
+				
+				<tr>
+					<td class="info names"> - <a href="mailto:a.bertoli@itsrizzoli.it" target="_blank">Bertoli Alessandro</a>: a.bertoli@itsrizzoli.it</td>
+				</tr>
+				
+				<tr>
+					<td class="info names"> - <a href="mailto:m.donofrio@itsrizzoli.it" target="_blank">D'Onofrio Michele</a>: m.donofrio@itsrizzoli.it</td>
+				</tr>
+				
+				<tr>
+					<td class="info names"> - <a href="mailto:f.meani@itsrizzoli.it" target="_blank">Meani Francesco</a>: f.meani@itsrizzoli.it</td>
+				</tr>
+				
+				<tr>
+					<td class="info names"> - <a href="mailto:l.rega@itsrizzoli.it" target="_blank">Rega Luis</a>: l.rega@itsrizzoli.it</td>
+				</tr>	
+			</table>
+	</div>
+</div>
+
+
+  <!--==========================
+  Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <object id="s">TravelPlan</object>.  All Rights Reserved
+          </div>
+          <div class="credits">
+            Site made by Alessandro Bertoli.<br><br><br>
+          </div>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  
+  
+<script src='js/jquery-3.3.1.min.js'></script>
+<script  src="js/miefunzioni.js"></script>
+<script  src="js/index.js"></script>
+<script  src="js/infoAccount.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>

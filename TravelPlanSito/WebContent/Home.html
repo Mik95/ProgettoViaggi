@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="it" >
+<html lang="it" style="overflow-y: hidden;">
 
 <head>
   <meta charset="UTF-8">
   <title>TravelPlan - Home</title>
+  
+  <link rel="icon" href="img/favicon.ico" />
   
   	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
@@ -12,23 +14,22 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style2.css">
 	<link rel="stylesheet" href="css/mieistili.css">
-	<link rel="stylesheet" href="css/stiliNavbar.css">
 
 </head>
 
-<body style= "background-color: #eaeaea">
+<body style= "background-color: #eaeaea" onload="noBack(); controlloLogin()" onpageshow="if (event.persisted) noBack();" onunload="">
 	
 	
   <!--==========================
   Login Section
   ============================-->
   
-<section id="sfondoiniziale">
+<section id="sfondo">
     
 
 <br><br><div align="center"><img src="img/TravelPlanWhite.png" alt="TravelPlan Logo" id="tpl" width="500"></div>
 
-  <div class="form">
+  <div class="form login-form">
       
       <ul class="tab-group">
         <li class="tab active" id="li1"><a href="#login">Accedi</a></li>
@@ -39,25 +40,25 @@
         
         <div id="login">
            
-          <form action="/" method="post">
+          <form id="formLogin" action="/" method="post">
           
             <div class="field-wrap">
             <label>
-              Username (o Email)<span class="req">*</span>
+              Email<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input id="email" type="text" name="email"/>
           </div>
           
           <div class="field-wrap">
             <label>
               Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input id="password" type="password" name="password"/>
           </div>
           
-          <p class="forgot"><a href="#">Hai dimenticato la Password?</a></p>
+          <p class="forgot"><a href="CambiaPassword.html">Hai dimenticato la Password?</a></p>
           
-          <button class="button button-block">ACCEDI</button>
+          <input type="submit" id="btnLogin" value="ACCEDI" class="button button-block" onclick="controlloAccedi()">
           
           </form>
 
@@ -65,46 +66,39 @@
         
         <div id="signup">   
  
-          <form action="/" method="post">
+          <form id="formSignin" action="/" method="post">
           
           <div class="top-row">
             <div class="field-wrap">
               <label>
                 Nome<span class="req">*</span>
               </label>
-              <input type="text" required autocomplete="off" />
+              <input name="name" id="name" type="text" required autocomplete="off" />
             </div>
         
             <div class="field-wrap">
               <label>
                 Cognome<span class="req">*</span>
               </label>
-              <input type="text"required autocomplete="off"/>
+              <input name="lastname" id="lastname" type="text"required autocomplete="off"/>
             </div>
-          </div>
-
-		  <div class="field-wrap">
-              <label>
-              	Username<span class="req">*</span>
-              </label>
-              <input type="text"required autocomplete="off"/>
           </div>
 
           <div class="field-wrap">
             <label>
               Email<span class="req">*</span>
             </label>
-            <input type="email"required autocomplete="off"/>
+            <input name="email2" id="email2" type="email"required autocomplete="off"/>
           </div>
           
           <div class="field-wrap">
             <label>
               Password<span class="req">*</span>
             </label>
-            <input type="password"required autocomplete="off"/>
+            <input name="password2" id="password2" type="password"required autocomplete="off"/>
           </div>
           
-          <button type="submit" class="button button-block">REGISTRATI</button>
+          <input onclick="controlloRegistrati()" type="button" id="btnSignin" value="REGISTRATI" class="button button-block">
           
           </form>
 
@@ -116,134 +110,12 @@
 
 </section>
 
-  <!--==========================
-  Header Section
-  ============================-->
-  <nav id="header" class="navbar navbar-inverse" data-spy="affix" data-offset-top="970">
-    <div id="container">
-      <table id="tab1">
-      	<tr>
-      		<td width="100">
-      			<div id="logo">
-        			<a href="#sfondoiniziale">
-        			<img onmouseenter="ingrandimento()" onmouseleave="rimpicciolimento()"
-        			 id="logobar" src="img/TravelPlanRigaWhite2.png" alt="TravelPlan Logo" height="40" /></img>
-        			</a>
-      			</div>
-      		</td>
-      
-      		<td>
-      			<nav id="nav-menu-container">
-        		<ul class="nav-menu">
-          		<li><a href="#sfondoiniziale">Accedi / Registrati</a></li>
-          		<li><a href="#creapiano">Pianifica il tuo Viaggio</a></li>
-          		<li><a href="#mieiviaggi">I miei Viaggi</a></li>
-        		</ul>
-      			</nav>
-      		</td>
-      	</tr>
-      </table>
-    </div>
-  </nav>
-  <!-- #header -->
- 
-  <!--==========================
-  Create Plan Section
-  ============================--> 
- 
-<section id="creapiano"><br><br><br><br>
 
-<div class="form large-form">
-	<div class="tab-content">
-	<form action="/" method="post">
-	
-		<div class="field-wrap"><label>
-              Città<span class="req">*</span>
-            </label>
-            <input type="text"required autocomplete="off"/>
-         </div>
-         
-        <div class="field-wrap"><label>
-              gg/mm/aaaa<span class="req">*</span>
-            </label>
-            <input type="date"required autocomplete="off"/>
-         </div>
-          
-          <button class="button button-block">Imposta Partenza</button>
-	</form>	
-	</div>
-<br><br><br><br>
-
-<table align="center">
-<tr>
-	<td><button class="button rounded-button">+</button></td>
-	<td><button class="button fine-viaggio">Termina Viaggio</button></td>
-</tr>
-</table>
-
-<br><br><br><br>
-	<div class="tab-content">
-	<form action="/" method="post">
-
-        <div class="field-wrap"><label>
-              gg/mm/aaaa<span class="req">*</span>
-            </label>
-            <input type="date"required autocomplete="off"/>
-         </div>
-          
-          <button class="button button-block">Imposta Arrivo</button>
-	</form>	
-	</div>
-</div>
-
-</section> 
-
-  <!--==========================
-  My Plans Section
-  ============================--> 
-  
-<br><br><br><br>
-	<div class="tab-content">
-	<form action="/" method="post">
-
-        <div class="field-wrap"><label>
-              gg/mm/aaaa<span class="req">*</span>
-            </label>
-            <input type="date"required autocomplete="off"/>
-         </div>
-          
-          <button class="button button-block">Imposta Arrivo</button>
-	</form>	
-	</div>
-</div>
-
-</section>   
- 
-  <!--==========================
-  Footer
-  ============================-->
-  <footer id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="copyright">
-            &copy; Copyright <object id="s">TravelPlan</object>.  All Rights Reserved
-          </div>
-          <div class="credits">
-            Site made by Alessandro Bertoli.<br><br><br>
-          </div>
-          </div>
-        </div>
-      </div>
-  </footer>
-  <!-- #footer -->
-
-  
-  
 <script src='js/jquery-3.3.1.min.js'></script>
 <script  src="js/miefunzioni.js"></script>
 <script  src="js/index.js"></script>
-<script  src="js/custom.js"></script>
+<script  src="js/loginregistration.js"></script>
+
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 

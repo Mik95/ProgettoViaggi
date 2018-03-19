@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>TravelPlan - Scegli Alloggio</title>
+  
+  <link rel="icon" href="img/favicon.ico" />
+  
+  	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- stile stelline -->
+  
+	<!-- Main CSS Files -->  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+	<link rel="stylesheet" href="css/mieistili.css">
+	<link rel="stylesheet" href="css/stiliNavbar.css">
+
+</head>
+
+<body style= "background-color: #eaeaea">
+
+  <!--==========================
+  Header Section
+  ============================-->
+  <nav id="header" class="navbar navbar-inverse">
+    <div id="container">
+      <table id="tab1">
+      	<tr>
+      		<td width="100">
+      			<div id="logo">
+        			<a href="PianificaViaggio.html">
+        			<img onmouseenter="ingrandimento()" onmouseleave="rimpicciolimento()"
+        			 id="logobar" src="img/TravelPlanRigaWhite2.png" alt="TravelPlan Logo" height="40" /></img>
+        			</a>
+      			</div>
+      		</td>
+      
+      		<td>
+      			<nav id="nav-menu-container">
+        		<ul class="nav-menu">
+          		<li><a href="MyProfile.html">Il mio profilo</a></li>
+          		<li><a href="MieiViaggi.html">I miei Viaggi</a></li>
+        		</ul>
+      			</nav>
+      		</td>
+      	</tr>
+      </table>
+    </div>
+  </nav>
+  
+  <!--==========================
+  Hotel Research
+  ============================-->  
+
+<section>
+ 
+<div id="frmView" class="form larger-form">
+
+	<form action="/" method="post">
+	
+	<table style="width: 100%;">
+		<tr>
+			<td>
+			<div class="field-wrap" style="font-style: italic; margin-top: 5px;">
+            	<label>
+              		<i align="right" class="fa fa-search"></i>  search...
+            	</label>
+            	<input type="text"/>
+    		</div>
+    		</td>
+    
+    		<td><input type="button" class="gestplan cerca" value="Cerca" /></td>
+    	</tr>
+    </table>        
+
+	<!-- LISTA HOTEL -->
+	
+	</form>
+	
+</div>
+
+
+
+</section>  
+  
+  
+  
+  <!--==========================
+  Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <object id="s">TravelPlan</object>.  All Rights Reserved
+          </div>
+          <div class="credits">
+            Site made by Alessandro Bertoli.<br><br><br>
+          </div>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+<script src='js/jquery-3.3.1.min.js'></script>
+<script  src="js/miefunzioni.js"></script>
+<script  src="js/index.js"></script>
+<script  src="js/infoAlloggioResearch.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>  

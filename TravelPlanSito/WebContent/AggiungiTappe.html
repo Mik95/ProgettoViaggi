@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>TravelPlan - Aggiungi Tappe</title>
+  
+  <link rel="icon" href="img/favicon.ico" />
+  
+  	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  
+	<!-- Main CSS Files -->  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+	<link rel="stylesheet" href="css/mieistili.css">
+	<link rel="stylesheet" href="css/stiliNavbar.css">
+
+</head>
+
+<body style= "background-color: #eaeaea">
+
+  <!--==========================
+  Header Section
+  ============================-->
+  <nav id="header" class="navbar navbar-inverse">
+    <div id="container">
+      <table id="tab1">
+      	<tr>
+      		<td width="100">
+      			<div id="logo">
+        			<a href="PianificaViaggio.html">
+        			<img onmouseenter="ingrandimento()" onmouseleave="rimpicciolimento()"
+        			 id="logobar" src="img/TravelPlanRigaWhite2.png" alt="TravelPlan Logo" height="40" /></img>
+        			</a>
+      			</div>
+      		</td>
+      
+      		<td>
+      			<nav id="nav-menu-container">
+        		<ul class="nav-menu">
+          		<li><a href="MyProfile.html">Il mio profilo</a></li>
+          		<li><a href="MieiViaggi.html">I miei Viaggi</a></li>
+        		</ul>
+      			</nav>
+      		</td>
+      	</tr>
+      </table>
+    </div>
+  </nav>
+  
+  <!--========================== 
+  Aggiungi Tappe Section
+  ============================--> 
+
+<div class="infotype">Aggiungi le tue Tappe</div>
+
+<div class="form large-form">
+			
+	<table align="center">
+		<tr>
+			<td><input id="btnAddTappa" type="button" class="button rounded-button" value="+" onclick="top.location.href = 'AlloggioResearch.html'" /></td>					<td><input id="btnTermina" type="button" class="button fine-viaggio" value="Termina Viaggio" onclick="top.location.href = 'PrenotaMezzo.html'" /></td>
+		</tr>
+	</table>
+			
+	<div id="tappeSalvate" style="color: #fff"></div>
+				
+</div>
+
+
+  <!--==========================
+  Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <object id="s">TravelPlan</object>.  All Rights Reserved
+          </div>
+          <div class="credits">
+            Site made by Alessandro Bertoli.<br><br><br>
+          </div>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  
+  
+<script src='js/jquery-3.3.1.min.js'></script>
+<script  src="js/miefunzioni.js"></script>
+<script  src="js/index.js"></script>
+<script  src="js/vistaTappe.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="ProgettoViaggi" transaction-type="RESOURCE_LOCAL">
+		<class>it.appviaggi.model.MezzoDiTrasporto</class>
+		<class>it.appviaggi.model.PacchettoViaggio</class>
+		<class>it.appviaggi.model.Struttura</class>
+		<class>it.appviaggi.model.Tappa</class>
+		<class>it.appviaggi.model.Utente</class>
+		<class>it.appviaggi.model.Luogo</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://travelplandb.cn8werffmzmm.eu-central-1.rds.amazonaws.com:3306/travelplandb"/>
+			<property name="javax.persistence.jdbc.user" value="alebertoli98"/>
+			<property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+			<property name="" value=""/>
+			<property name="javax.persistence.jdbc.password" value="Forzamilan98"/>
+		</properties>
+	</persistence-unit>
+</persistence>

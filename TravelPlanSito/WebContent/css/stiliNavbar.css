@@ -27,10 +27,3 @@
 .navbar-inverse .btn-link:focus,.navbar-inverse .btn-link:hover{color:#fff}
 .navbar-inverse .btn-link[disabled]:focus,.navbar-inverse .btn-link[disabled]:hover,fieldset[disabled] .navbar-inverse .btn-link:focus,fieldset[disabled] .navbar-inverse .btn-link:hover{color:#444}
 
-.affix{position:fixed}
-
-.affix {
-      top: 0;
-      width: 100%;
-      z-index: 9999 !important;
-  }

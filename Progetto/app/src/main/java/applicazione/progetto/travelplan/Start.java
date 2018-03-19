@@ -14,6 +14,10 @@ public class Start extends Activity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.start );
 
+
+
+
+
         new Handler ().postDelayed( new Runnable()
         {
             @Override

@@ -31,7 +31,7 @@ $(document).ready(function(){
 									'&nbsp;'
 									
 									
-									+'<span style="display: inline-block; white-space: nowrap; overflow: hidden; max-width: 95px;" class="stars"></span>'
+									+'<span class="stars'+i+'"></span>'
 									
 								+'</td>'
 								
@@ -61,32 +61,32 @@ $(document).ready(function(){
 	$('#pa'+i).click(function(){
 			sessionStorage.setItem('id_struttura', JSON.stringify(s.idStruttura));
 		})
-		
-	i++;
 	
 	switch(s.numeroStelle)
 	{
 	case 1: 
-		$('.stars').append('<span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>&nbsp;');
+		$('.stars'+i).append('<span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>&nbsp;');
 		break;
 
 	case 2: 
-		$('.stars').append('<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>&nbsp;');
+		$('.stars'+i).append('<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>&nbsp;');
 		break;
 		
 	case 3: 
-		$('.stars').append('<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>&nbsp;');
+		$('.stars'+i).append('<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>&nbsp;');
 		break;
 
 	case 4: 
-		$('.stars').append('<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span>&nbsp;');
+		$('.stars'+i).append('<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span>&nbsp;');
 		break;
 		
 	case 5: 
-		$('.stars').append('<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>&nbsp;');
+		$('.stars'+i).append('<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>&nbsp;');
 		break;	
 
 	}
+	
+	i++;
 	
 	})
 

@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import it.appviaggi.business.EsitoOperazione;
-import it.appviaggi.business.GestionePacchetto;
 import it.appviaggi.business.GestioneTappa;
 
 

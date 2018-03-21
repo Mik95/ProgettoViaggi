@@ -9,8 +9,8 @@ $('#btnLogin').click(function(e) {
 	.done(function(esito){
 		console.log(esito);
 		if(esito.success) {
-			localStorage.setItem('utente', JSON.stringify(esito.oggettoRisultante));
-			location.href ='MieiViaggi.html';
+			sessionStorage.setItem('utente', JSON.stringify(esito.oggettoRisultante));
+			location.href ='PianificaViaggio.html';
 		} else {
 			window.alert("Email e/o Password errato/i.");
 		}
@@ -32,7 +32,6 @@ $('#btnSignin').click(function(e) {
 	.done(function(esito){
 		console.log(esito);
 		if(esito.success) {
-			localStorage.setItem('utente', JSON.stringify(esito.oggettoRisultante));
 			window.alert("Registrazione effettuata correttamente");
 			location.href ='Home.html';
 		}

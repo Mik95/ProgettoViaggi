@@ -39,6 +39,10 @@ public class MezzoDiTrasporto {
 	@JsonIgnore
 	private List<Tappa> tappa;
 	
+	@OneToMany(mappedBy="mezzo", cascade=CascadeType.ALL)
+	@JsonIgnore
+	private List<ViaggioDiRientro> rientri;
+	
 	public int getIdMezzoDiTrasporto() {
 		return idMezzoDiTrasporto;
 	}
@@ -101,6 +105,14 @@ public class MezzoDiTrasporto {
 
 	public void setData(String data) {
 		this.data = data;
+	}
+
+	public List<ViaggioDiRientro> getRientri() {
+		return rientri;
+	}
+
+	public void setRientri(List<ViaggioDiRientro> rientri) {
+		this.rientri = rientri;
 	}
 
 	

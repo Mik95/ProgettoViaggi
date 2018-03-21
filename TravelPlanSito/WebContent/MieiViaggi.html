@@ -18,7 +18,7 @@
 
 </head>
 
-<body style= "background-color: #eaeaea">
+<body style= "background-color: #eaeaea" onload="controlloAccount()">
 
   <!--==========================
   Header Section
@@ -57,53 +57,7 @@
 
 	<div class="form large-form">  
 		<div id="mieiviaggi">
-			<form action="/" method="post">
-
-    			<div class="field-wrap">
-            		<label class="planlabel">
-            			<table align="center" id="dentrolabel">
-            				<tr>
-								<td align="center" class="tappa">
-								Milano<br>01/01/2018
-								</td>
-							
-								<td align="center" class="linea">
-								<img src="img/airplane.png" width="30px">
-								<hr color="white" size="2px">
-								</td>
-							
-								<td align="center" class="tappa">
-								Roma<br>01/01/2018
-								</td>      		
-            				</tr>
-            			
-            				<tr>
-								<td align="center" class="tappa">
-								Roma<br>01/01/2018
-								</td>
-								
-								<td align="center" class="linea">
-								<img src="img/car.png" width="30px">
-								<hr color="white" size="2px">
-								</td>
-							
-								<td align="center" class="tappa">
-								Milano<br>01/01/2018
-								</td>      		
-            				</tr>
-            			</table>
-            		
-            			<table align="center">
-            			<tr>
-							<td><input type="button" class="gestplan" value="Modifica Piano" onclick="top.location.href = 'AggiungiTappe.html'" /></td>
-							<td><input type="button" class="gestplan" value="Elimina Piano" onclick="confermaElimina()"/></td>
-						</tr>
-            			</table>
-            		
-            		</label>
-         		</div>
-         	
-			</form>	
+			<div id="listaPacchetti"></div>
 		</div>
 	</div>
 
@@ -131,6 +85,7 @@
 <script src='js/jquery-3.3.1.min.js'></script>
 <script  src="js/miefunzioni.js"></script>
 <script  src="js/index.js"></script>
+<script  src="js/mieiPacchetti.js"></script>
 
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

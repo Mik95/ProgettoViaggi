@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>TravelPlan - Aggiungi Tappe</title>
+  <title>TravelPlan - Scegli Mezzo di Trasporto</title>
   
   <link rel="icon" href="img/favicon.ico" />
   
@@ -19,6 +19,7 @@
 </head>
 
 <body style= "background-color: #eaeaea" onload="controlloAccount()">
+
 
   <!--==========================
   Header Section
@@ -50,23 +51,32 @@
   </nav>
   
   <!--========================== 
-  Aggiungi Tappe Section
+  Prenota Mezzo Section
   ============================--> 
 
-<div class="infotype">Aggiungi le tue Tappe</div>
-
-<div class="form large-form">
+<div class="form larger-form">
+		<div id="creapiano">
+		<form action="/" method="post">
+	
+			<div class="nomemezzo"><img src="img/airplane.png" width="40px"> Aereo:</div>
 			
-	<table align="center">
-		<tr>
-			<td><input id="btnAddTappa" type="button" class="button rounded-button" value="+" onclick="top.location.href = 'AlloggioResearch.html'" /></td>
-			<td><input id="btnTermina" type="button" class="button fine-viaggio" value="Termina Viaggio" onclick="top.location.href = 'PrenotaMezzoDiRientro.html'" /></td>
-		</tr>
-	</table>
+			<div id="aereo" class="scrollwrapper"></div>
 			
-	<div id="tappeSalvate" style="color: #fff"></div>
-				
-</div>
+			<br><br><div class="nomemezzo"><img src="img/bus.png" width="40px"> Autobus:</div>
+			
+			<div id="autobus" class="scrollwrapper"></div>
+			
+			<br><br><div class="nomemezzo"><img src="img/car.png" width="40px"> Automobile:</div>
+			
+			<div id="auto" class="scrollwrapper"></div>
+			
+			<br><br><div class="nomemezzo"><img src="img/train.png" width="40px"> Treno:</div>
+			
+			<div id="treno" class="scrollwrapper"></div>
+			
+		</form>
+		</div>
+	</div>
 
 
   <!--==========================
@@ -92,7 +102,8 @@
 <script src='js/jquery-3.3.1.min.js'></script>
 <script  src="js/miefunzioni.js"></script>
 <script  src="js/index.js"></script>
-<script  src="js/vistaTappe.js"></script>
+<script  src="js/vistaMezziRientro.js"></script>
+
 
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

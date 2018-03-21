@@ -35,6 +35,10 @@ public class Luogo {
 	@OneToMany(mappedBy="arrivo", cascade=CascadeType.ALL)
 	@JsonIgnore
 	private List<MezzoDiTrasporto> arrivi;
+	
+	@OneToMany(mappedBy="arrivo", cascade=CascadeType.ALL)
+	@JsonIgnore
+	private List<ViaggioDiRientro> rientri;
 
 	public int getIdLuogo() {
 		return idLuogo;
@@ -75,13 +79,21 @@ public class Luogo {
 	public void setPartenze(List<MezzoDiTrasporto> partenze) {
 		this.partenze = partenze;
 	}
-
+	
 	public List<MezzoDiTrasporto> getArrivi() {
 		return arrivi;
 	}
 
 	public void setArrivi(List<MezzoDiTrasporto> arrivi) {
 		this.arrivi = arrivi;
+	}
+
+	public List<ViaggioDiRientro> getRientri() {
+		return rientri;
+	}
+
+	public void setRientri(List<ViaggioDiRientro> rientri) {
+		this.rientri = rientri;
 	}
 
 	

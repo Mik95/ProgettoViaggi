@@ -1,5 +1,5 @@
 
-var utente=localStorage.getItem('utente');
+var utente=sessionStorage.getItem('utente');
 utente = JSON.parse(utente);
 
 $(document).ready(function(){

@@ -1,7 +1,5 @@
 package it.appviaggi.model;
 
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,15 +13,15 @@ public class Tappa {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idTappa;
 
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	private Struttura struttura;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	private MezzoDiTrasporto mezzo;
 	
 	private String dataFineTappa;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	private PacchettoViaggio pacchettoViaggio;
 
 

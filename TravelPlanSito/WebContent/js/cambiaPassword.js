@@ -41,7 +41,7 @@ $('#btnChange').click(function(e) {
 	.done(function(esito){
 		console.log(esito);
 		if(esito.success) {
-			localStorage.setItem('utente', JSON.stringify(esito.oggettoRisultante));
+			sessionStorage.setItem('utente', JSON.stringify(esito.oggettoRisultante));
 			window.alert("Password cambiata correttamente");
 			location.href ='Home.html';
 			localStorage.clear();
@@ -59,7 +59,7 @@ $('#btnChange').click(function(e) {
 	
 });
 
-var utente = localStorage.getItem('utente');
+var utente = sessionStorage.getItem('utente');
 
 if(utente) { 
 	utente =JSON.parse(utente)

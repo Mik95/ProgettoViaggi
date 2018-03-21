@@ -1,4 +1,4 @@
-var utente = localStorage.getItem('utente');
+var utente = sessionStorage.getItem('utente');
 
 if(utente) {
 	utente =JSON.parse(utente)

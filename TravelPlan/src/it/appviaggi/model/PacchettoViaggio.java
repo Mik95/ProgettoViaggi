@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -20,7 +21,7 @@ public class PacchettoViaggio {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idPacchettoViaggio;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	private Luogo partenza_arrivo;
 	
 	@OneToMany(mappedBy="pacchettoViaggio", cascade=CascadeType.ALL)
@@ -28,8 +29,11 @@ public class PacchettoViaggio {
 	private List<Tappa> tappe;
 	
 	private int numeroPersone;
+	
+	@OneToOne(cascade=CascadeType.ALL)
+	private ViaggioDiRientro rientro;
 
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	private Utente utente;
 	
 	public Utente getUtente() {
@@ -91,6 +95,12 @@ public class PacchettoViaggio {
 	}
 	public void setDataPartenza(String dataPartenza) {
 		this.dataPartenza = dataPartenza;
+	}
+	public ViaggioDiRientro getRientro() {
+		return rientro;
+	}
+	public void setRientro(ViaggioDiRientro rientro) {
+		this.rientro = rientro;
 	}
 
 	

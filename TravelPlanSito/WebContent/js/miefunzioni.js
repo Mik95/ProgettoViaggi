@@ -89,7 +89,7 @@ function controlloRegistrati(){
 
 function controlloLogin(){
 	
-	var utente = localStorage.getItem('utente');
+	var utente = sessionStorage.getItem('utente');
 	
 	if(utente)
 		top.location.href = 'MieiViaggi.html';
@@ -112,19 +112,20 @@ function logout(){
     if (richiesta){
     	top.location.href = 'Home.html';
     	localStorage.clear();
+    	sessionStorage.clear();
     }
     		
 }
 
 /*
-	MIEI VIAGGI
+ALTRO
 */
 
-function confermaElimina(){
-	var richiesta = window.confirm("Stai per eliminare questo Piano. Vuoi continuare?");
-    if (richiesta){
-    	top.location.href = 'MieiViaggi.html';
-    	
-    }
+function controlloAccount(){
+	
+	var utente = sessionStorage.getItem('utente');
+	
+	if(!utente)
+		top.location.href = 'Home.html';
 }
 

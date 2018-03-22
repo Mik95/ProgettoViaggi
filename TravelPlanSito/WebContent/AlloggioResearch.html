@@ -58,26 +58,24 @@
  
 <div id="frmView" class="form larger-form">
 
-	<form action="/" method="post">
-	
 	<table style="width: 100%;">
 		<tr>
 			<td>
 			<div class="field-wrap" style="font-style: italic; margin-top: 5px;">
             	<label>
-              		<i align="right" class="fa fa-search"></i>  search...
+              		<i align="right" class="fa fa-search"></i>  ricerca per Città...
             	</label>
-            	<input type="text"/>
+            	<input id="ricercaCitta" type="text"/>
     		</div>
     		</td>
     
-    		<td><input type="button" class="gestplan cerca" value="Cerca" /></td>
+    		<td><input id="btnCerca" type="submit" class="gestplan cerca" value="Cerca" onclick="window.location.reload()" /></td>
     	</tr>
     </table>        
 
 	<!-- LISTA HOTEL -->
 	
-	</form>
+	<div id="listaHotel"></div>
 	
 </div>
 

@@ -35,19 +35,19 @@ $(document).ready(function(){
 				switch(m.tipoMezzo){
 		
 				case 'Aereo':
-					$('#aereo').append('<div class="card"><br><div class="prezzo">'+m.prezzo+'€</div><div class="descalloggio">Data: '+m.data+'</div><div class="descalloggio">Ora: '+m.ora+'</div><br><div align="center"><input type="button" class="gestplan prenmez" id="pm'+i+'" value="Prenota Mezzo""></div></div>');
+					$('#aereo').append('<div class="card"><br><div class="prezzo">'+m.prezzo+'€</div><div class="descalloggio">Data: '+m.data+'</div><div class="descalloggio">Ora: '+m.ora+'</div><br><div align="center"><input type="button" class="gestplan prenmez" id="pm'+i+'" value="Prenota Mezzo"></div></div>');
 					break;
 			
 				case 'Autobus':
-					$('#autobus').append('<div class="card"><br><div class="prezzo">'+m.prezzo+'€</div><div class="descalloggio">Data: '+m.data+'</div><div class="descalloggio">Ora: '+m.ora+'</div><br><div align="center"><input type="button" class="gestplan prenmez" id="pm'+i+'" value="Prenota Mezzo""></div></div>');
+					$('#autobus').append('<div class="card"><br><div class="prezzo">'+m.prezzo+'€</div><div class="descalloggio">Data: '+m.data+'</div><div class="descalloggio">Ora: '+m.ora+'</div><br><div align="center"><input type="button" class="gestplan prenmez" id="pm'+i+'" value="Prenota Mezzo"></div></div>');
 					break;
 			
 				case 'Automobile':
-					$('#auto').append('<div class="card"><br><div class="prezzo">'+m.prezzo+'€</div><div class="descalloggio">Data: '+m.data+'</div><div class="descalloggio">Ora: '+m.ora+'</div><br><div align="center"><input type="button" class="gestplan prenmez" id="pm'+i+'" value="Prenota Mezzo""></div></div>');
+					$('#auto').append('<div class="card"><br><div class="prezzo">'+m.prezzo+'€</div><div class="descalloggio">Data: '+m.data+'</div><div class="descalloggio">Ora: '+m.ora+'</div><br><div align="center"><input type="button" class="gestplan prenmez" id="pm'+i+'" value="Prenota Mezzo"></div></div>');
 					break;
 			
 				case 'Treno':
-					$('#treno').append('<div class="card"><br><div class="prezzo">'+m.prezzo+'€</div><div class="descalloggio">Data: '+m.data+'</div><div class="descalloggio">Ora: '+m.ora+'</div><br><div align="center"><input type="button" class="gestplan prenmez" id="pm'+i+'" value="Prenota Mezzo""></div></div>');
+					$('#treno').append('<div class="card"><br><div class="prezzo">'+m.prezzo+'€</div><div class="descalloggio">Data: '+m.data+'</div><div class="descalloggio">Ora: '+m.ora+'</div><br><div align="center"><input type="button" class="gestplan prenmez" id="pm'+i+'" value="Prenota Mezzo"></div></div>');
 					break;
 			
 				}

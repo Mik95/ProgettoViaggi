@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorText"
+    tools:context="applicazione.progetto.travelplan.Fragment.ProfiloFragment">
+
+
+    <TextView
+        android:id="@+id/nomeProfilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        android:text="Nome" />
+
+    <EditText
+        android:id="@+id/edNomeProfilo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/nomeProfilo"
+        android:layout_marginTop="50dp"
+        android:maxLength="15"
+        android:layout_alignBottom="@id/nomeProfilo"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/cognomeProfilo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/nomeProfilo"
+        android:text="Cognome" />
+
+    <EditText
+        android:id="@+id/edCognomeProfilo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edNomeProfilo"
+        android:layout_alignBottom="@id/cognomeProfilo"
+        android:layout_marginLeft="120dp"
+        android:text="" />
+
+
+    <TextView
+        android:id="@+id/emailProfilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/cognomeProfilo"
+        android:text="Email" />
+
+    <EditText
+        android:id="@+id/edEmailProfilo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edCognomeProfilo"
+        android:layout_alignBottom="@id/emailProfilo"
+        android:layout_toRightOf="@+id/nomeProfilo"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/passwordProfilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/emailProfilo"
+        android:text="Password" />
+
+    <EditText
+        android:id="@+id/edPasswordProfilo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edEmailProfilo"
+        android:layout_alignBottom="@+id/passwordProfilo"
+        android:layout_toRightOf="@+id/passwordProfilo"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btCambiaPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edPasswordProfilo"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="50dp"
+        android:text="CAMBIA PASSWORD"/>
+
+    <ImageButton
+        android:id="@+id/tornaImpo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edPasswordProfilo"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:src="@drawable/ic_impostazioni"
+        />
+
+</RelativeLayout>

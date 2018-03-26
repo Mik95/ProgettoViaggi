@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/emailChPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="50dp"
+        android:text="Email"/>
+
+    <EditText
+        android:id="@+id/edEmailChPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/emailChPass"
+        android:layout_toRightOf="@id/emailChPass"
+        android:hint="Inserisci la tua email"/>
+
+    <TextView
+        android:id="@+id/nuovapassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/confermapassword"
+        android:layout_below="@+id/edEmailChPass"
+        android:text="Nuova Password" />
+
+    <EditText
+        android:id="@+id/edNuovaPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edEmailChPass"
+        android:layout_alignBaseline="@id/nuovapassword"
+        android:layout_toRightOf="@id/nuovapassword"
+        android:hint="Inserisci nuova password"/>
+
+    <TextView
+        android:id="@+id/confermapassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nuovapassword"
+        android:text="Conferma password"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <EditText
+        android:id="@+id/edConfermaPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/confermapassword"
+        android:layout_toRightOf="@id/confermapassword"
+        android:hint="Conferma password"/>
+
+    <Button
+        android:id="@+id/btConfermaCambioPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@id/confermapassword"
+        android:text="Conferma"/>
+
+    <TextView
+        android:id="@+id/tornaImposta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/confermapassword"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:text="Torna alle impostazioni"
+        />
+
+
+
+
+</RelativeLayout>

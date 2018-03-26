@@ -1,59 +1,68 @@
-<<<<<<< HEAD:TravelPlan/src/it/appviaggi/model/MezzoDiTrasporto.java
-package it.appviaggi.model;
+package applicazione.progetto.travelplan.Models;
 
+
+import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-
-@Entity
 public class MezzoDiTrasporto {
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int idMezzoDiTrasporto;
-	
-	private String tipoMezzo;
 
-	private String data;
-	
-	private String ora;
-	
-	private double prezzo;
-	
-	@ManyToOne(cascade=CascadeType.ALL)
-	private Luogo partenza;
-	
-	@ManyToOne(cascade=CascadeType.ALL)
-	private Luogo arrivo;
-	
-	@OneToMany(mappedBy="mezzo", cascade=CascadeType.ALL)
-	@JsonIgnore
-	private List<Tappa> tappa;
-	
-	public int getIdMezzoDiTrasporto() {
-		return idMezzoDiTrasporto;
+	@SerializedName("idMezzoDiTrasporto")
+	int id;
+	@SerializedName("tipoMezzo")
+	String tipo;
+	@SerializedName("data")
+	String data;
+	@SerializedName("ora")
+	String ora;
+	@SerializedName("prezzo")
+	double prezzo;
+	@SerializedName("partenza")
+	Luogo partenza;
+	@SerializedName("arrivo")
+	Luogo arrivo;
+
+	public MezzoDiTrasporto(int id, String tipo, String data, String ora, double prezzo, Luogo partenza, Luogo arrivo) {
+		this.id = id;
+		this.tipo = tipo;
+		this.data = data;
+		this.ora = ora;
+		this.prezzo = prezzo;
+		this.partenza = partenza;
+		this.arrivo = arrivo;
 	}
 
-	public void setIdMezzoDiTrasporto(int idMezzoDiTrasporto) {
-		this.idMezzoDiTrasporto = idMezzoDiTrasporto;
+	public int getId() {
+		return id;
 	}
 
-	public String getTipoMezzo() {
-		return tipoMezzo;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public void setTipoMezzo(String tipoMezzo) {
-		this.tipoMezzo = tipoMezzo;
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public String getData() {
+		return data;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+	}
+
+	public String getOra() {
+		return ora;
+	}
+
+	public void setOra(String ora) {
+		this.ora = ora;
 	}
 
 	public double getPrezzo() {
@@ -62,14 +71,6 @@ public class MezzoDiTrasporto {
 
 	public void setPrezzo(double prezzo) {
 		this.prezzo = prezzo;
-	}
-
-	public List<Tappa> getTappa() {
-		return tappa;
-	}
-
-	public void setTappa(List<Tappa> tappa) {
-		this.tappa = tappa;
 	}
 
 	public Luogo getPartenza() {
@@ -88,55 +89,11 @@ public class MezzoDiTrasporto {
 		this.arrivo = arrivo;
 	}
 
-	public String getOra() {
-		return ora;
-	}
+	@Override
+	public String toString (){
 
-	public void setOra(String ora) {
-		this.ora = ora;
+		return "Ciao sono " +tipo;
 	}
-
-	public String getData() {
-		return data;
-	}
-
-	public void setData(String data) {
-		this.data = data;
-	}
-
 	
 
 }
-=======
-package applicazione.progetto.travelplan.Models;
-
-import java.util.List;
-
-public class MezzoDiTrasporto {
-	
-	private int idMezzoDiTrasporto;
-	
-	private String nome;
-	
-	private List<TitoloDiViaggio> titoliDiViaggio;
-
-	public int getIdMezzoDiTrasporto() {
-		return idMezzoDiTrasporto;
-	}
-
-	public void setIdMezzoDiTrasporto(int idMezzoDiTrasporto) {
-		this.idMezzoDiTrasporto = idMezzoDiTrasporto;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	
-	
-
-}
->>>>>>> 86a5d816d9d9cb8aa940fd779664c4273bef9bfd:Progetto/app/src/main/java/applicazione/progetto/travelplan/Models/MezzoDiTrasporto.java

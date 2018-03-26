@@ -1,10 +1,11 @@
 package applicazione.progetto.travelplan.Activity;
-import android.app.Fragment;
+
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.IBinder;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -33,13 +34,7 @@ import applicazione.progetto.travelplan.R;
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //Fragments
-    Fragment main;
-    Fragment piano;
-    Fragment ricerca;
-    Fragment dettagli;
-    Fragment mezzo;
-    Fragment impostazioni;
-    Fragment viaggi;
+
     //Arraylist che gestisce i fragments
     ArrayList<Fragment> fr = new ArrayList<>();
 
@@ -141,7 +136,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         super.onBackPressed();
 
-      Fragment fpiani = new Pianificazione();
+      /*Fragment fpiani = new Pianificazione();
 
       ArrayList<Fragment> f = new ArrayList<>();
       f=gestioneFragmentsBack();
@@ -149,7 +144,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
       {
           getFragmentManager().beginTransaction().hide(fpiani);
       }
-
+      */
 
 
         return;
@@ -158,6 +153,13 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     private ArrayList<Fragment> gestioneFragmentsBack()
     {
         //Inizializzazione gestione fragment
+       /* Fragment main = new FragmentMain();
+        Fragment piano;
+        Fragment ricerca;
+        Fragment dettagli;
+        Fragment mezzo;
+        Fragment impostazioni;
+        Fragment viaggi;
         main = new FragmentMain();
         piano = new Pianificazione();
         ricerca = new ResearchFragment();
@@ -171,7 +173,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         fr.add(dettagli);
         fr.add(mezzo);
         fr.add(impostazioni);
-        fr.add(viaggi);
+        fr.add(viaggi);*/
 
         return fr;
     }
@@ -180,13 +182,15 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        android.app.Fragment frag = null;
+        android.support.v4.app.Fragment frag = null;
 
         if (id == R.id.fragmentSettings) {
-            frag = new SettingsFragment();
+            //frag = new SettingsFragment();
+
+            getFragmentManager().beginTransaction().replace(R.id.frame, new SettingsFragment()).commit();
         }
 
-        getFragmentManager().beginTransaction().replace(R.id.frame, frag).commit();
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -220,7 +224,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         if (fr.contains(fragment)) {
             switch (fr.indexOf(fragment)) {
                 case 0:
-                    Fragment frag = new FragmentMain();
+                    //Fragment frag = new FragmentMain();
                     break;
                 case 1:
 
@@ -259,6 +263,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             dett.add(indirizzo);
             st.notifyDataSetChanged();
             list.setAdapter(st);
+            getIncomingIntent(dett,st,list);
 
         } else {
             if (getIntent().hasExtra("CittaPartenzaAereo") && getIntent().hasExtra("CittaArrivoAereo") && getIntent().hasExtra("OraPartenzaAereo") && getIntent().hasExtra("OraArrivoAereo")) {
@@ -269,6 +274,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 dett.add(cittaPartenza + " " + oraPartenza + " " + cittaArrivo + " " + oraArrivo);
                 st.notifyDataSetChanged();
                 list.setAdapter(st);
+                getIncomingIntent(dett,st,list);
 
             } else {
                 if (getIntent().hasExtra("CittaPartenzaPullman") && getIntent().hasExtra("CittaArrivoPullman") && getIntent().hasExtra("OraPartenzaPullman") && getIntent().hasExtra("OraArrivoPullman")) {
@@ -281,6 +287,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     dett.add(cittaPartenza + " " + oraPartenza + " " + cittaArrivo + " " + oraArrivo);
                     st.notifyDataSetChanged();
                     list.setAdapter(st);
+                    getIncomingIntent(dett,st,list);
 
                 } else {
                     if (getIntent().hasExtra("CittaPartenzaAuto") && getIntent().hasExtra("CittaArrivoAuto") && getIntent().hasExtra("OraPartenzaAuto") && getIntent().hasExtra("OraArrivoAuto") && getIntent().hasExtra("Automobile")) {
@@ -292,6 +299,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                         dett.add("Hai usa l' " + auto + " " + cittaPartenza + " " + oraPartenza + " " + cittaArrivo + " " + oraArrivo);
                         st.notifyDataSetChanged();
                         list.setAdapter(st);
+                        getIncomingIntent(dett,st,list);
 
                     } else {
                         if (getIntent().hasExtra("CittaPartenzaTreno") && getIntent().hasExtra("CittaArrivoTreno") && getIntent().hasExtra("OraPartenzaTreno") && getIntent().hasExtra("OraArrivoTreno")) {
@@ -303,6 +311,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                             dett.add(cittaPartenza + " " + oraPartenza + " " + cittaArrivo + " " + oraArrivo);
                             st.notifyDataSetChanged();
                             list.setAdapter(st);
+                            getIncomingIntent(dett,st,list);
 
                         }
                     }
@@ -315,7 +324,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     public void gestioneFragments()
     {
         //Inizializzazione gestione fragment
-        main = new FragmentMain();
+        /*main = new FragmentMain();
         piano = new Pianificazione();
         ricerca = new ResearchFragment();
         dettagli = new DettagliHotelFragment();
@@ -328,7 +337,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         fr.add(dettagli);
         fr.add(mezzo);
         fr.add(impostazioni);
-        fr.add(viaggi);
+        fr.add(viaggi);*/
     }
 
     public static void closeKeyboard(Context c, IBinder windowToken) {

@@ -9,16 +9,6 @@
     tools:context="applicazione.progetto.travelplan.Activity.Login">
 
 
-
-    <ImageView
-        android:id="@+id/im"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="100dp"
-        android:background="@color/colorText"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
-        android:src="@mipmap/travelblacks" />
     <Button
         android:id="@+id/btnAccedi"
         android:layout_width="wrap_content"

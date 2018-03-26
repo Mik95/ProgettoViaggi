@@ -61,6 +61,19 @@ public class Utente {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public boolean controlloUtente(String e,String pass)
+	{
+		if(password.equals(pass) && email.equals(e))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+
+	}
 	
 
 }

@@ -1,31 +1,28 @@
 package applicazione.progetto.travelplan.Models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class Luogo {
-	
-
-	private int idLuogo;
-	
-	private String nome;
 
 
-	public Luogo()
-		{
+	@SerializedName("idLuogo")
+	int id;
+	@SerializedName("nome")
+	String nome;
 
+	public Luogo(int id, String nome) {
+		this.id = id;
+		this.nome = nome;
 	}
 
-	public Luogo(String nome)
-	{
-		this.nome=nome;
+	public int getId() {
+		return id;
 	}
 
-	public int getIdLuogo() {
-		return idLuogo;
-	}
-
-	public void setIdLuogo(int idLuogo) {
-		this.idLuogo = idLuogo;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getNome() {

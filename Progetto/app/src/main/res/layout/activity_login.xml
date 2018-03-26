@@ -6,6 +6,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/sfondosplash"
     tools:context="applicazione.progetto.travelplan.Activity.Login">
 
 
@@ -13,8 +14,8 @@
         android:id="@+id/btnAccedi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:textColor="@color/focus"
+        android:background="@color/focus"
+        android:textColor="@color/colorAccent"
         android:layout_marginTop="350dp"
         android:layout_marginLeft="220dp"
         android:text="Accedi" />
@@ -26,6 +27,7 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="sans-serif"
         android:textStyle="bold"
+        android:textColor="@color/colorText"
         android:layout_marginTop="150dp"
         android:layout_marginLeft="140dp"
         android:text="Email" />
@@ -36,6 +38,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tve"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="example@gmail.com"
@@ -47,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/tve"
         android:layout_below="@+id/etlEmail"
+        android:textColor="@color/colorText"
         android:fontFamily="sans-serif"
         android:textStyle="bold"
         android:layout_marginTop="10dp"
@@ -59,6 +64,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_below="@id/tvp"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:hint="Inserire password"
@@ -70,6 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/etPass"
         android:fontFamily="sans-serif"
+        android:textColor="@color/colorText"
         android:textStyle="bold"
         android:layout_marginTop="370dp"
         android:text="Sei registrato?" />

@@ -82,10 +82,15 @@ public class RegistrationFragment extends Fragment {
                                          public void onResponse(Call<RisultatoReg> call, Response<RisultatoReg> response) {
 
                                              if (response.body().isSuccess()) {
-                                                 Intent accedi = new Intent(getActivity(), Login.class);
-                                                 accedi.putExtra("emailRegistrazione", ee.getText().toString());
-                                                 accedi.putExtra("passRegistrazione", ep.getText().toString());
-                                                 startActivity(accedi);
+                                                 Intent acc = new Intent(getActivity(), Login.class);
+                                                 acc.putExtra("emailRegistrazione", ee.getText().toString());
+                                                 acc.putExtra("passRegistrazione", ep.getText().toString());
+                                                 startActivity(acc);
+                                                 Toast.makeText(getActivity(),response.body().getMessage(),Toast.LENGTH_SHORT).show();
+                                             }
+                                             else
+                                             {
+                                                 Toast.makeText(getActivity(),response.body().getMessage(),Toast.LENGTH_SHORT).show();
                                              }
                                          }
 
@@ -93,7 +98,7 @@ public class RegistrationFragment extends Fragment {
                                          public void onFailure(Call<RisultatoReg> call, Throwable t) {
 
                                              System.out.println("FAILURE");
-                                             Toast.makeText(getActivity(),"L'utente è già registrato!", Toast.LENGTH_LONG).show();
+                                             //Toast.makeText(getActivity(),"L'utente è già registrato!", Toast.LENGTH_LONG).show();
                                          }
                                      });
 

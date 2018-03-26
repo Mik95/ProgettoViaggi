@@ -1,6 +1,7 @@
 package applicazione.progetto.travelplan.Fragment;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.design.widget.FloatingActionButton;
@@ -13,15 +14,23 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-import applicazione.progetto.travelplan.Fragment.DialogFragment.ConfermaTerminaPiano;
 import applicazione.progetto.travelplan.Activity.Home;
+import applicazione.progetto.travelplan.Models.Luogo;
 import applicazione.progetto.travelplan.R;
+import applicazione.progetto.travelplan.Retrofit.APILuoghi;
+import applicazione.progetto.travelplan.Retrofit.APIPacchetto;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Pianificazione extends Fragment{
 
@@ -53,6 +62,9 @@ public class Pianificazione extends Fragment{
 
     EditText cittaP;
     EditText cittaA;
+
+    ArrayList<Luogo> luogo = new ArrayList<>();
+    Luogo trovato = new Luogo();
 
     public Pianificazione()
     {
@@ -161,14 +173,91 @@ public class Pianificazione extends Fragment{
             @Override
             public void onClick(View v) {
 
-                getFragmentManager().beginTransaction().add(R.id.frame, new RicercaMezziFragment()).commit();
+                if(cittaA.length()>0 && cittaP.length()>0 && personeEd.getText().toString()!=null)
+                {
+                    getFragmentManager().beginTransaction().add(R.id.frame, new RicercaMezziFragment()).commit();
+                }
+                else
+                {
+                    Toast.makeText(getActivity(),"Compila tutti i campi!",Toast.LENGTH_SHORT).show();
+                }
+
+
             }
         });
 
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new ConfermaTerminaPiano().show(getFragmentManager(), "Conferma termina piano");
+              // new ConfermaTerminaPiano().show(getFragmentManager(), "Conferma termina piano");
+                Retrofit.Builder builder = new Retrofit.Builder().baseUrl("http://10.0.2.2:8080/TravelPlanSito/").addConverterFactory(GsonConverterFactory.create());
+                Retrofit retrofit = builder.build();
+
+                APILuoghi apLuoghi = retrofit.create(APILuoghi.class);
+
+                Call<ArrayList<Luogo>> call = apLuoghi.getLuoghi();
+
+                call.enqueue(new Callback<ArrayList<Luogo>>() {
+                    @Override
+                    public void onResponse(Call<ArrayList<Luogo>> call, Response<ArrayList<Luogo>> response) {
+
+
+                        for (Luogo l : response.body()){
+
+                            luogo.add(l);
+
+                            //System.out.println(m.toString());
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ArrayList<Luogo>> call, Throwable t) {
+
+                        System.out.println("FAILURE");
+                    }
+                });
+
+                if(luogo.contains(cittaP.getText().toString()))
+                {
+                    trovato.setId(luogo.indexOf(cittaP.getText().toString()));
+                }
+                else
+                {
+                    Toast.makeText(getActivity(),"Città non presente nel database!",Toast.LENGTH_SHORT).show();
+                }
+
+                Retrofit.Builder builde = new Retrofit.Builder().baseUrl("http://10.0.2.2:8080/TravelPlanSito/").addConverterFactory(GsonConverterFactory.create());
+                Retrofit retrofi = builde.build();
+
+                APIPacchetto packAPI = retrofi.create(APIPacchetto.class);
+
+                Call<Integer> callpack = packAPI.creaPacchetto(p,trovato.getId(),cittaP.getText().toString(),edData.getText().toString());
+
+                callpack.enqueue(new retrofit2.Callback<Integer>() {
+                    @Override
+                    public void onResponse(Call<Integer> call, Response<Integer> response) {
+
+                        if (response.body().equals(trovato.getId())){
+
+                            Toast.makeText(getActivity(),"Creazione pacchetto avvenuta",Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
+                            Toast.makeText(getActivity(),"Luogo non trovato",Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Integer> call, Throwable t) {
+
+                        System.out.println(t.getMessage());
+                        System.out.println(t.getCause());
+                    }
+                });
+
+
+
+
             }
         });
 

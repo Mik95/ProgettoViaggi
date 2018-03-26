@@ -122,23 +122,10 @@ public class Login extends Activity {
                                 Intent i = new Intent(Login.this, Home.class);
                                 startActivity(i);
                             }
-
-
-
-                            //Toast.makeText(Login.this,"Utente non presente",Toast.LENGTH_SHORT).show();
-
-                             /*for (Utente u : response.body()){
-
-                                    arrayUtente.add(u);
-                                    if(arrayUtente.contains(u.controlloUtente(email,password)))
-                                    {
-
-                                    }
-                                 else {
-                                        Toast.makeText(Login.this,"Registrati!",Toast.LENGTH_SHORT).show();
-                                    }
-                                    //System.out.println(u.getNome());
-                                }*/
+                            else
+                            {
+                                Toast.makeText(Login.this,"Utente non registrato",Toast.LENGTH_SHORT).show();
+                            }
                         }
 
                         @Override
@@ -150,27 +137,6 @@ public class Login extends Activity {
                             System.out.println(t.getCause());
                         }
                     });
-
-
-                  /*  Retrofit.Builder builder = new Retrofit.Builder().baseUrl("http://192.168.1.22:8080/TravelPlanSito/").addConverterFactory(GsonConverterFactory.create());
-                    Retrofit retrofit = builder.build();
-
-                    APIUtente apiUtente = retrofit.create(APIUtente.class);
-
-                    Call<Utente> call = apiUtente.controlloUtente();
-
-                   call.enqueue(new retrofit2.Callback<Utente>()
-                   {
-                       @Override
-                       public void onResponse(Call<Utente> call, Response<Utente> response) {
-
-                       }
-
-                       @Override
-                       public void onFailure(Call<Utente> call, Throwable t) {
-
-                       }
-                   });*/
 
 
                    /*final UtenteDBAdapter ua=new UtenteDBAdapter(Login.this);

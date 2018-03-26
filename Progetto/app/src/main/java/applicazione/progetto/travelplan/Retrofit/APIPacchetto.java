@@ -20,4 +20,7 @@ public interface APIPacchetto {
     @FormUrlEncoded
     @GET("deletePack")
     Call<Void> deletePacchettoViaggio(@Field("idPacchetto") int id);
+    @FormUrlEncoded
+    @GET("pacchetto")
+    Call<Integer> creaPacchetto(@Field("nPersone") int persone,@Field("idLuogo") int id, @Field("partenza") String partenza,@Field("data") String data);
 }

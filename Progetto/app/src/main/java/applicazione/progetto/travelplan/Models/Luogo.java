@@ -12,6 +12,11 @@ public class Luogo {
 	@SerializedName("nome")
 	String nome;
 
+	public Luogo()
+	{
+
+	}
+
 	public Luogo(int id, String nome) {
 		this.id = id;
 		this.nome = nome;

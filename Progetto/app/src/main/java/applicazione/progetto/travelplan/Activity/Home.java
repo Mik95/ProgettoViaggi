@@ -263,7 +263,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             dett.add(indirizzo);
             st.notifyDataSetChanged();
             list.setAdapter(st);
-            getIncomingIntent(dett,st,list);
+
 
         } else {
             if (getIntent().hasExtra("CittaPartenzaAereo") && getIntent().hasExtra("CittaArrivoAereo") && getIntent().hasExtra("OraPartenzaAereo") && getIntent().hasExtra("OraArrivoAereo")) {
@@ -274,7 +274,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 dett.add(cittaPartenza + " " + oraPartenza + " " + cittaArrivo + " " + oraArrivo);
                 st.notifyDataSetChanged();
                 list.setAdapter(st);
-                getIncomingIntent(dett,st,list);
 
             } else {
                 if (getIntent().hasExtra("CittaPartenzaPullman") && getIntent().hasExtra("CittaArrivoPullman") && getIntent().hasExtra("OraPartenzaPullman") && getIntent().hasExtra("OraArrivoPullman")) {
@@ -287,7 +286,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     dett.add(cittaPartenza + " " + oraPartenza + " " + cittaArrivo + " " + oraArrivo);
                     st.notifyDataSetChanged();
                     list.setAdapter(st);
-                    getIncomingIntent(dett,st,list);
+
 
                 } else {
                     if (getIntent().hasExtra("CittaPartenzaAuto") && getIntent().hasExtra("CittaArrivoAuto") && getIntent().hasExtra("OraPartenzaAuto") && getIntent().hasExtra("OraArrivoAuto") && getIntent().hasExtra("Automobile")) {
@@ -299,7 +298,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                         dett.add("Hai usa l' " + auto + " " + cittaPartenza + " " + oraPartenza + " " + cittaArrivo + " " + oraArrivo);
                         st.notifyDataSetChanged();
                         list.setAdapter(st);
-                        getIncomingIntent(dett,st,list);
+
 
                     } else {
                         if (getIntent().hasExtra("CittaPartenzaTreno") && getIntent().hasExtra("CittaArrivoTreno") && getIntent().hasExtra("OraPartenzaTreno") && getIntent().hasExtra("OraArrivoTreno")) {
@@ -311,7 +310,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                             dett.add(cittaPartenza + " " + oraPartenza + " " + cittaArrivo + " " + oraArrivo);
                             st.notifyDataSetChanged();
                             list.setAdapter(st);
-                            getIncomingIntent(dett,st,list);
 
                         }
                     }

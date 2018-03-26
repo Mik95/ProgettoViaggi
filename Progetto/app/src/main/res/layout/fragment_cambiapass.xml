@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="500dp"
+    android:layout_height="match_parent"
+    android:background="@mipmap/sfondosplash"
+    >
 
     <TextView
         android:id="@+id/emailChPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="170dp"
+        android:textColor="@color/colorText"
         android:layout_marginLeft="50dp"
         android:text="Email"/>
 
@@ -17,14 +20,18 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@id/emailChPass"
         android:layout_toRightOf="@id/emailChPass"
+        android:textColorHint="@color/colorText"
+        android:textColor="@color/colorText"
         android:hint="Inserisci la tua email"/>
 
     <TextView
         android:id="@+id/nuovapassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_alignStart="@+id/confermapassword"
         android:layout_below="@+id/edEmailChPass"
+        android:textColor="@color/colorText"
         android:text="Nuova Password" />
 
     <EditText
@@ -32,7 +39,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/edEmailChPass"
+        android:textColor="@color/colorText"
         android:layout_alignBaseline="@id/nuovapassword"
+        android:textColorHint="@color/colorText"
         android:layout_toRightOf="@id/nuovapassword"
         android:hint="Inserisci nuova password"/>
 
@@ -40,6 +49,7 @@
         android:id="@+id/confermapassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
         android:layout_below="@id/nuovapassword"
         android:text="Conferma password"
         android:layout_marginTop="20dp"
@@ -50,7 +60,9 @@
         android:id="@+id/edConfermaPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
         android:layout_alignBaseline="@id/confermapassword"
+        android:textColorHint="@color/colorText"
         android:layout_toRightOf="@id/confermapassword"
         android:hint="Conferma password"/>
 
@@ -61,6 +73,8 @@
         android:layout_marginTop="50dp"
         android:layout_marginLeft="50dp"
         android:layout_below="@id/confermapassword"
+        android:textColor="@color/colorText"
+        android:background="@color/focus"
         android:text="Conferma"/>
 
     <TextView
@@ -68,6 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/confermapassword"
+        android:textColor="@color/colorText"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="50dp"
         android:text="Torna alle impostazioni"

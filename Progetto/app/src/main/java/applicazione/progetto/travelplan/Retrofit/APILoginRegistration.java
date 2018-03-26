@@ -22,7 +22,7 @@ public interface APILoginRegistration {
     Call<RisultatoLogin> controlloLogin(@Field("email") String email, @Field("password") String password);
     @FormUrlEncoded
     @POST("registration")
-    Call<RisultatoReg> controlloRegistration(@Field("name") String name, @Field("lastname") String lastname, @Field("password") String password, @Field("email") String email);
+    Call<RisultatoReg> controlloRegistration(@Field("name") String name, @Field("lastname") String lastname, @Field("password2") String password, @Field("email2") String email);
 
 
 

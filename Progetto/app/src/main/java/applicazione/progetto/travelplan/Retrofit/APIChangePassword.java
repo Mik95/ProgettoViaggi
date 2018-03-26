@@ -1,5 +1,6 @@
 package applicazione.progetto.travelplan.Retrofit;
 
+import applicazione.progetto.travelplan.Models.RisultatoCambiaPass;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -13,5 +14,5 @@ public interface APIChangePassword {
 
     @FormUrlEncoded
     @POST("changePassword")
-    Call<Void> changePass(@Field("email") String email,@Field("password") String password);
+    Call<RisultatoCambiaPass> changePass(@Field("email") String email, @Field("password") String password);
 }
